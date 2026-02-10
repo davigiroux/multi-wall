@@ -1,9 +1,9 @@
-import { useAccount, useBalance } from 'wagmi';
+import { useConnection, useBalance } from 'wagmi';
 import { formatEther } from 'viem';
 import { BalanceCard } from './BalanceCard';
 
 export function EthereumBalance() {
-  const { isConnected, address } = useAccount();
+  const { isConnected, address } = useConnection();
   const { data: balance, isLoading, isError } = useBalance({ address });
 
   return (

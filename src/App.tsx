@@ -1,6 +1,7 @@
 import { WalletConnect } from './components/WalletConnect';
 import { SolanaBalance } from './components/SolanaBalance';
 import { EthereumBalance } from './components/EthereumBalance';
+import { SolanaNetworkToggle } from './components/SolanaNetworkToggle';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
             MultiWall
           </h1>
           <p className="text-gray-600 mt-2">Multi-chain wallet dashboard</p>
+          <div className="mt-4">
+            <SolanaNetworkToggle />
+          </div>
         </header>
 
         <WalletConnect />

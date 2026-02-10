@@ -1,10 +1,10 @@
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { useAccount, useConnect, useDisconnect } from 'wagmi';
+import { useConnection, useConnect, useDisconnect } from 'wagmi';
 import { truncateAddress } from '../utils/address';
 import { WalletCard } from './WalletCard';
 
 function EthConnectButton() {
-  const { address, isConnected } = useAccount();
+  const { address, isConnected } = useConnection();
   const { connect, connectors } = useConnect();
   const { disconnect } = useDisconnect();
 
